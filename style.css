@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.centrado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centrado-parado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.center {
+  transform: translate(-50%, -50%) scale(2);
+  --g: #0f0;
+  --b: #00f;
+  --r: #f00;
+  filter: hue-rotate(var(--hr, 0deg));
+
+
+  .rectangle-1x15-parado {
+    width: 150px;
+    height: 10px;
+    background-color: var(--g);
+    transform: translate(-50%, -50%) rotate(90deg);
+
+    .rectangle-1x15 {
+      width: 150px;
+      height: 10px;
+      background-color: var(--b);
+      transform: translate(-50%, -50%) rotate(-90deg);
+
+      .rectangle-3x13-parado {
+        width: 130px;
+        height: 30px;
+        background-color: var(--r);
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        .rectangle-3x13 {
+          width: 130px;
+          height: 30px;
+          background-color: var(--g);
+          transform: translate(-50%, -50%) rotate(-90deg);
+
+          .rectangle-5x11-parado {
+            width: 110px;
+            height: 50px;
+            background-color: var(--b);
+            transform: translate(-50%, -50%) rotate(90deg);
+
+            .rectangle-5x11 {
+              width: 110px;
+              height: 50px;
+              background-color: var(--r);
+              transform: translate(-50%, -50%) rotate(-90deg);
+
+              .rectangle-9x7-parado {
+                width: 70px;
+                height: 90px;
+                background-color: var(--g);
+
+                .rectangle-9x7 {
+                  width: 90px;
+                  height: 70px;
+                  background-color: var(--b);
+
+                  .square-7x7 {
+                    width: 70px;
+                    height: 70px;
+                    background-color: var(--r);
+
+                    .square-5x5 {
+                      width: 50px;
+                      height: 50px;
+                      background-color: var(--g);
+
+                      .square-3x3 {
+                        width: 30px;
+                        height: 30px;
+                        background-color: var(--b);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <=1200px) {
+  .center {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
